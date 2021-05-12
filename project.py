@@ -30,7 +30,7 @@ def action(msg):
     chat_id = msg['chat']['id']
     command = msg['text']
 
-    print 'Received: %s' % command
+    print ('Received: %s' % command)
 
     if 'on' in command:
         message = "Turned on "
@@ -82,7 +82,7 @@ telegram_bot = telepot.Bot('1848052340:AAFwzKKDt3KD5e6X-ca5sKSHCl5_D9rzRc8')
 print (telegram_bot.getMe())
 
 MessageLoop(telegram_bot, action).run_as_thread()
-print 'Up and Running....'
+print ('Up and Running....')
 
 while 1:
     time.sleep(10)
